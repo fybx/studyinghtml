@@ -4,79 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Ferit'in Auth Sayfası</title>
-    <style>
-        #header{
-            text-align: center;
-            height: 10%;
-            color: whitesmoke;
-            background: cadetblue;
-            padding: 10px 0 10px 0;
-        }
-
-        #footer{
-            text-align: center;
-            color: whitesmoke;
-            height: 10%;
-            background: cadetblue;
-            padding: 10px 0 10px 0;
-        }
-
-        html, body {
-            font-family: Helvetica, Arial, sans-serif;
-            background: antiquewhite;
-            font-size: large;
-            height: 100%;
-        }
-        
-        body {
-            margin: 0;
-        }
-        
-        .flex-container {
-            height: 80%;
-            padding: 0;
-            margin: 0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-direction: column;
-        }
-
-        .flex-item {
-            margin: 5px;
-            text-align: center;
-        }
-    </style>
-    <script>
-        function clearInput(){
-            document.getElementById("usernameBox").value = null;
-            document.getElementById("passwordBox").value = null;
-        }
-        
-        async function auth(){
-            var uname = document.getElementById("usernameBox").value;
-            let passw = await sha256(document.getElementById("passwordBox").value);
-            debugger;
-            
-            /* hashlerin hiçbir uygulamaya hardcode edilmemesi gerektiğini unutmayalım =D */
-            if (uname === "admin" && passw == "a665a45920422f9d417e4867efdc4fb8a04a1f3fff1fa07e998e86f7f7a27ae3"){
-               alert("Aferin! Başarıyla giriş yapıldı =D");
-               window.open("https://github.com/fybalaban", "_self");
-
-            }
-            else {
-                alert("Üzgünüm :( Giriş yapılamadı.");
-            }
-        }
-
-         async function sha256(message) {
-            const msgBuffer = new TextEncoder().encode(message);
-            const hashBuffer = await crypto.subtle.digest('SHA-256', msgBuffer);
-            const hashArray = Array.from(new Uint8Array(hashBuffer));
-            const hashHex = hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
-            return hashHex;
-        }
-    </script>
+    <link rel="stylesheet" href="formuygulamasi.css">
+    <script src="formuygulamasi.js"></script>
 </head>
 <body>
     <header id="header">
