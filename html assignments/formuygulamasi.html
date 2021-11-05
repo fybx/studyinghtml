@@ -1,0 +1,99 @@
+﻿<!-- Ferit Yiğit BALABAN 032190002-->
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Ferit'in Auth Sayfası</title>
+    <style>
+        #header{
+            text-align: center;
+            height: 10%;
+            color: whitesmoke;
+            background: cadetblue;
+            padding: 10px 0 10px 0;
+        }
+
+        #footer{
+            text-align: center;
+            color: whitesmoke;
+            height: 10%;
+            background: cadetblue;
+            padding: 10px 0 10px 0;
+        }
+
+        html, body {
+            font-family: Helvetica, Arial, sans-serif;
+            background: antiquewhite;
+            font-size: large;
+            height: 100%;
+        }
+        
+        body {
+            margin: 0;
+        }
+        
+        .flex-container {
+            height: 80%;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .flex-item {
+            margin: 5px;
+            text-align: center;
+        }
+    </style>
+    <script>
+        function clearInput(){
+            document.getElementById("usernameBox").value = null;
+            document.getElementById("passwordBox").value = null;
+        }
+        
+        async function auth(){
+            var uname = document.getElementById("usernameBox").value;
+            let passw = await sha256(document.getElementById("passwordBox").value);
+            debugger;
+            
+            /* hashlerin hiçbir uygulamaya hardcode edilmemesi gerektiğini unutmayalım =D */
+            if (uname === "admin" && passw == "a665a45920422f9d417e4867efdc4fb8a04a1f3fff1fa07e998e86f7f7a27ae3"){
+               alert("Aferin! Başarıyla giriş yapıldı =D");
+               window.open("https://github.com/fybalaban", "_self");
+
+            }
+            else {
+                alert("Üzgünüm :( Giriş yapılamadı.");
+            }
+        }
+
+         async function sha256(message) {
+            const msgBuffer = new TextEncoder().encode(message);
+            const hashBuffer = await crypto.subtle.digest('SHA-256', msgBuffer);
+            const hashArray = Array.from(new Uint8Array(hashBuffer));
+            const hashHex = hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
+            return hashHex;
+        }
+    </script>
+</head>
+<body>
+    <header id="header">
+        <h1>Devam etmek için lütfen giriş yapın. Şifre '123' değil.</h1>
+    </header>
+    <div class="flex-container">
+        <label class="flex-item" for="usernameBox">Kullanıcı adınız:</label>
+        <input class="flex-item"  id="usernameBox" type="text" placeholder="Kullanıcı adı...">
+        <label class="flex-item"  for="passwordBox">Şifreniz:</label>
+        <input class="flex-item" id="passwordBox" type="password" placeholder="Şifre...">
+        <div>
+            <input class="flex-item" id="authButton" type="button" value="Giriş yap" onclick="auth()">
+            <input class="flex-item" id="clearButton" type="button" value="Temizle" onclick="clearInput()">
+        </div>
+    </div>
+    <footer id="footer">
+        <p>Copyright &copy; 2021, Ferit Giriş Çözümleri Limited Şirketi</p>
+    </footer>
+</body>
+</html>
