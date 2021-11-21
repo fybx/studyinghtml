@@ -1,11 +1,98 @@
+<!-- 032190002 Ferit Yiğit BALABAN 1/B -->
+<!-- Sistemli çalışmak için client'e gösterilmeyen -->
+<!-- elemanların ve özelliklerin isimlendirmelerini İngilizce tuttum -->
 <!DOCTYPE html>
 <html lang="tr">
 <head>
+    <meta charset="UTF-8">
     <title>Ferit Yiğit BALABAN</title>
     <link rel="stylesheet" href="cvfybalaban.css">
+    <script src="cvfybalaban.js"></script>
 </head>
 
 <body>
-    
+    <div class="container">
+        <div class="navbarVertical"> <!-- Sol navbar -->
+            <ul>
+                <li>
+                    <button onclick="click('about')"><img alt="Button image: person" src="/images/navbarAbout.png"></button>
+                </li>
+                <li>
+                    <button onclick="click('edhis')"><img alt="Button image: person" src="/images/navbarEducation.png"></button>
+                </li>
+                <li>
+                    <button onclick="click('skill')"><img alt="Button image: person" src="/images/navbarSkills.png"></button>
+                </li>
+                <li>
+                    <button onclick="click('hobby')"><img alt="Button image: person" src="/images/navbarHobbies.png"></button>
+                </li>
+                <li>
+                    <button onclick="click('cntct')"><img alt="Button image: person" src="/images/navbarContact.png"></button>
+                </li>
+            </ul>
+        </div>
+        
+        <div> <!-- Orta özet alanı -->
+            <img id="profilePhoto" alt="Profile photo" src="/images/photo.jpg">
+            <h2>Ferit Yiğit BALABAN</h2>
+            <hr color="aliceblue">
+            <h3>Bilgisayar Mühendisi</h3>
+            <ul class="navbarHorizontal">
+                <li>
+                    <a href="https://linkedin.com/in/ferityigitbalaban">
+                        <img alt="LinkedIn" src="/images/linkedin.svg">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://twitter.com/feritdegil">
+                        <img alt="Twitter" src="/images/twitter.svg">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://github.com/fybalaban">
+                        <img alt="GitHub" src="/images/github.svg">
+                    </a>
+                </li>
+            </ul>
+        </div>
+        
+        <div> <!-- Sağ içerik alanı -->
+            <div id="about" class="subtitle">
+                <h1>Hakkımda</h1>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. A asperiores dicta ea, excepturi illo iste laborum mollitia praesentium quasi recusandae repellat sit, ullam vel. Aut cupiditate delectus ipsum labore repudiandae, unde vero voluptatum. Ab aliquid autem, consectetur iusto nostrum obcaecati provident quasi qui ullam unde? Accusamus, accusantium alias asperiores assumenda atque beatae consequuntur cupiditate deserunt dolor eius ex excepturi facere facilis hic ipsa modi non omnis porro quae quas quasi, qui, quia quidem recusandae rem rerum tempora voluptates? Consequatur, iste?
+                </p>
+            </div>
+            
+            <div id="edhis" class="subtitle">
+                <h1>Eğitim geçmişim</h1>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae doloribus dolorum ea eum facilis in iure, minima optio quae quia, quos recusandae repellat repellendus rerum sint tempora vitae, voluptate. Accusamus animi consectetur deserunt dolores enim, eos harum laudantium minima nisi numquam odit pariatur porro quis quos saepe sequi sint veritatis.
+                </p>
+            </div>
+            
+            <div id="skill" class="subtitle">
+                <h1>Yeteneklerim ve deneyimlerim</h1>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis consequatur corporis, enim id, ipsum laboriosam molestias nobis pariatur perferendis porro, quam reprehenderit unde vero. Alias animi atque consequatur culpa dignissimos distinctio dolore doloremque eaque, eligendi ex fugit illo impedit ipsum laborum maiores nemo nisi nostrum quaerat quasi quo, rem sapiente sed, similique suscipit ut veniam voluptatibus. Cum ducimus, est laborum maxime molestiae pariatur possimus tempora veritatis voluptate. Accusantium, ad animi aperiam distinctio dolorem dolorum eius et inventore ipsa ipsam laboriosam minima minus obcaecati odit perferendis perspiciatis quidem ratione sed sit soluta totam ullam veniam! Amet, dicta esse id inventore magni minima minus nam neque nisi officiis, reprehenderit repudiandae sapiente similique totam voluptate. Cum delectus expedita inventore obcaecati perspiciatis quos voluptatum?
+                </p>
+            </div>
+            
+            <div id="hobby" class="subtitle">
+                <h1>Hobilerim</h1>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad architecto aspernatur at atque, aut blanditiis debitis delectus enim eos, esse et eveniet excepturi harum impedit ipsam maiores minima minus, mollitia natus nihil nulla obcaecati porro possimus ratione reiciendis rem sit voluptatibus! Accusantium adipisci aliquid consectetur fuga maiores molestias odit possimus? Deleniti iure, laudantium magni numquam odio tempora voluptates. Aut, cupiditate ea exercitationem expedita harum obcaecati possimus quae tempora. Consequuntur deleniti esse illo laborum mollitia quis rerum, veritatis. Aliquam corporis cum fugit id illo inventore ipsa minima, minus quia voluptate. Atque, dicta dignissimos eum inventore laboriosam pariatur qui! Ab accusamus architecto aspernatur consectetur consequuntur cumque, deleniti dignissimos doloribus eaque, est et eum expedita fugit illo in iste magni natus officiis, perspiciatis porro praesentium quam quidem quis quisquam ratione reprehenderit rerum saepe similique sit sunt tempore vel velit veritatis voluptate voluptatem voluptates.
+                </p>
+            </div>
+
+            <div id="cntct" class="subtitle">
+                <img src="/images/contentContact.png">
+                <h1>İletişim</h1>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut facere, facilis nesciunt officiis perspiciatis placeat quod rem similique sit tempora. Animi aperiam cupiditate, dignissimos dolore eaque eum iure laudantium magni, minus modi, nam nisi nulla odit praesentium quam quo tenetur veniam! Enim est ipsum magnam. A ad adipisci alias amet aperiam beatae commodi consectetur culpa cum, cupiditate delectus dicta dolorem dolorum eligendi enim eos facere, in iusto labore laudantium magnam maiores maxime molestiae nemo neque nulla praesentium quidem quis quos reiciendis repellendus sapiente sequi sint, tempore velit veniam voluptas? Assumenda, atque dolor eaque harum ipsum laboriosam libero, minus molestiae, mollitia reprehenderit sed sit? Cupiditate distinctio magni omnis sint temporibus! Assumenda consectetur corporis cumque dolor impedit laboriosam nam nostrum odit officia officiis qui quod recusandae, repudiandae suscipit, voluptate! Ab adipisci asperiores aspernatur assumenda at atque, debitis delectus doloremque ducimus, ea eius enim eos esse exercitationem in magnam modi molestias nam nisi nulla perspiciatis ratione recusandae rem repellat sunt tenetur vel! Asperiores assumenda cumque ducimus excepturi facere fuga fugiat itaque laborum, natus nemo nihil obcaecati provident qui quisquam recusandae saepe soluta. A cupiditate dicta distinctio ipsum odio omnis praesentium provident, quod temporibus.
+                </p>
+            </div>
+        </div>
+    </div>
 </body>
 </html>

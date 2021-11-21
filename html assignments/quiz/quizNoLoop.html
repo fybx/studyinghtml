@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Döngüsüz sayı tahmin</title>
+    <script>
+        const tahminEdilecekSayi = Math.floor(Math.random() * 101);
+        let girilenSayi;
+        function kontrolEt(){
+            girilenSayi = Number(document.getElementById("giris").value);
+            if (girilenSayi == tahminEdilecekSayi) {
+                alert("Doğru bildiniz!");
+            }
+            else if (girilenSayi > tahminEdilecekSayi) {
+                alert("Sayıyı küçültünüz!");
+            }
+            else {
+                alert("Sayıyı büyültünüz!");
+            }
+        }
+    </script>
+</head>
+<body>
+    <input type="number" id="giris">
+    <input type="button" onclick="kontrolEt()" value="Kontrol Et">
+</body>
+</html>
